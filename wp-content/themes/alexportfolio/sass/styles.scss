@@ -1,8 +1,16 @@
 // Import Bootstrap Compass integration
 @import "bootstrap-compass";
-
-// Import custom Bootstrap variables
 @import "bootstrap-variables";
-
-// Import Bootstrap for Sass
 @import "bootstrap";
+
+@import "compass/css3";
+
+@import "base/colors";
+@import "base/vars";
+
+@import "partials/typography";
+@import "partials/home";
+@import "partials/layout";
+@import "partials/navs";
+@import "partials/button";
+@import "partials/footer";
