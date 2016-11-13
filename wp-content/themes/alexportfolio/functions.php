@@ -24,13 +24,19 @@
 	function alexportfolio_register_menus() {
 		register_nav_menus(
 			array(
-				'main menu'	=>	__{'Main Meny'}
+				'main_menu'	=>	__('Main Menu')
 			)
-		)
+		);
 	}
 	add_action('init', 'alexportfolio_register_menus');
 
-		/* ------ Thumbnail Upscale ------ */
+	/* ------ Add Featured Image support in Post Pages ------ */
+	function alexportfolio_post_thumbnails() {
+		add_theme_support('post-thumbnails');
+	}
+	add_action('after_setup_theme', 'alexportfolio_post_thumbnails');
+
+	/* ------ Thumbnail Upscale ------ */
 	function alexportfolio_thumbnail_upscale( $default, $orig_w, $orig_h, $new_w, $new_h, $crop ){
 	    if ( !$crop ) return null; // let the wordpress default function handle this
 	 

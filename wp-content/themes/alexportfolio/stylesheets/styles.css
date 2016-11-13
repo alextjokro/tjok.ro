@@ -8803,6 +8803,19 @@ button.close {
 /*
 ** LAYOUT STYLES
 */
+/* ------ General Layout Styles ------ */
+/* line 6, ../sass/partials/_layout.scss */
+.content-area {
+  padding-top: 50px;
+}
+
+/* line 10, ../sass/partials/_layout.scss */
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 /*
 ** NAVIGATION STYLES
 */
@@ -8812,3 +8825,8 @@ button.close {
 /*
 ** FOOTER STYLES
 */
+/* line 5, ../sass/partials/_footer.scss */
+footer {
+  text-align: center;
+  padding: 60px 0;
+}
