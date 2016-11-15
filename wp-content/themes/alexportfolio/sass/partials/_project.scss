@@ -1,0 +1,78 @@
+/*
+** PROJECTS STYLES
+*/
+
+/* INDIVIDUAL PROJECT PAGE */
+.project {
+	&__header {
+		background-color: $grey;
+		text-align: center;
+		position: relative;
+		padding-bottom: 0;
+
+		&--bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+		}
+
+		&--title {
+			margin-bottom: 35px;
+		}
+
+		.container {
+			position: relative;
+			z-index: 2;
+		}
+
+		h1 {
+			margin-bottom: 0;
+			color: white;
+		}
+	}
+
+	&__overview {
+		background-color: $grey;
+
+		h5 {
+			color: $gold;
+			margin-bottom: 20px;
+		}
+
+		&--text {
+			border-right: solid 2px #ccc;
+
+			@media (min-width: $screen-md) {
+				padding-right: 30px;
+			}
+		}
+
+		&--tools {
+			@media (min-width: $screen-md) {
+				padding-left: 30px;
+			}
+		}
+	}
+
+	&__details {
+		position: relative;
+		text-align: center;
+
+		&--bg {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+
+		.container {
+			position: relative;
+			z-index: 2;
+		}
+
+		&--image {
+			margin-top: 60px;
+		}
+	}
+}

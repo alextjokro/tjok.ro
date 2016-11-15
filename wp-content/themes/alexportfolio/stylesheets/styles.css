@@ -8797,9 +8797,86 @@ button.close {
 /*
 ** TYPOGRAPHY STYLES
 */
-/*
-** HOME STYLES
-*/
+/* line 5, ../sass/partials/_typography.scss */
+h1, h2, h3, h4, h5, h6, p, li, a {
+  font-family: "Gotham", sans-serif;
+}
+
+/* line 9, ../sass/partials/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  color: #141414;
+}
+
+/* line 14, ../sass/partials/_typography.scss */
+p, li, a {
+  color: #727272;
+}
+
+/* line 18, ../sass/partials/_typography.scss */
+h1 {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* line 24, ../sass/partials/_typography.scss */
+h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* line 30, ../sass/partials/_typography.scss */
+h3 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* line 36, ../sass/partials/_typography.scss */
+h4 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+/* line 42, ../sass/partials/_typography.scss */
+h5 {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* line 48, ../sass/partials/_typography.scss */
+h6 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* line 54, ../sass/partials/_typography.scss */
+p, li {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* line 61, ../sass/partials/_typography.scss */
+ul {
+  padding-left: 30px;
+}
+
+/* line 65, ../sass/partials/_typography.scss */
+li {
+  margin-bottom: 10px;
+}
+/* line 68, ../sass/partials/_typography.scss */
+li:last-child {
+  margin-bottom: 15px;
+}
+
 /*
 ** LAYOUT STYLES
 */
@@ -8816,6 +8893,98 @@ button.close {
   margin: 0 auto;
 }
 
+/* line 16, ../sass/partials/_layout.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 20, ../sass/partials/_layout.scss */
+section {
+  padding: 60px 0;
+}
+
+/*
+** PROJECTS STYLES
+*/
+/* INDIVIDUAL PROJECT PAGE */
+/* line 7, ../sass/partials/_project.scss */
+.project__header {
+  background-color: #f6f6f6;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0;
+}
+/* line 13, ../sass/partials/_project.scss */
+.project__header--bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+/* line 20, ../sass/partials/_project.scss */
+.project__header--title {
+  margin-bottom: 35px;
+}
+/* line 24, ../sass/partials/_project.scss */
+.project__header .container {
+  position: relative;
+  z-index: 2;
+}
+/* line 29, ../sass/partials/_project.scss */
+.project__header h1 {
+  margin-bottom: 0;
+  color: white;
+}
+/* line 35, ../sass/partials/_project.scss */
+.project__overview {
+  background-color: #f6f6f6;
+}
+/* line 38, ../sass/partials/_project.scss */
+.project__overview h5 {
+  color: #A4947C;
+  margin-bottom: 20px;
+}
+/* line 43, ../sass/partials/_project.scss */
+.project__overview--text {
+  border-right: solid 2px #ccc;
+}
+@media (min-width: 992px) {
+  /* line 43, ../sass/partials/_project.scss */
+  .project__overview--text {
+    padding-right: 30px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 51, ../sass/partials/_project.scss */
+  .project__overview--tools {
+    padding-left: 30px;
+  }
+}
+/* line 58, ../sass/partials/_project.scss */
+.project__details {
+  position: relative;
+  text-align: center;
+}
+/* line 62, ../sass/partials/_project.scss */
+.project__details--bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 69, ../sass/partials/_project.scss */
+.project__details .container {
+  position: relative;
+  z-index: 2;
+}
+/* line 74, ../sass/partials/_project.scss */
+.project__details--image {
+  margin-top: 60px;
+}
+
+/*
+** HOME STYLES
+*/
 /*
 ** NAVIGATION STYLES
 */

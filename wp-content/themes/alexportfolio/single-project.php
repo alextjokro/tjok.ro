@@ -25,7 +25,8 @@ get_header(); ?>
 		
 		<div class="project">
 
-			<section class="project__header" style="background-color: <?php echo $bg_color; ?>">
+			<section class="project__header">
+				<div class="project__header--bg" style="background-color: <?php echo $bg_color; ?>"></div>
 				<div class="container">
 					<div class="section-title project__header--title row">
 						<div class="col-xs-12">
@@ -43,12 +44,12 @@ get_header(); ?>
 			<section class="project__overview">
 				<div class="container">
 					<div class="row">
-						<div class="project__overview--text col-xs-12 col-sm-8">
-							<h4>Project Overview</h4>
+						<div class="project__overview--text project__overview--col col-xs-12 col-sm-8">
+							<h5>Project Overview</h5>
 							<?php the_content(); ?>
 						</div>
-						<div class="project__overview--tools col-xs-12 col-sm-4">
-							<h4>Tools</h4>
+						<div class="project__overview--tools project__overview--col col-xs-12 col-sm-4">
+							<h5>Tools</h5>
 							<?php echo $tools; ?>
 						</div><!-- .project__overview--tools -->
 					</div><!-- .row -->
@@ -58,13 +59,13 @@ get_header(); ?>
 			<?php if( have_rows('project_details') ) :
 				while( have_rows('project_details') ) : the_row(); 
 
-				$title = get_field('section_title');
-				$lead_p = get_field('lead_paragraph');
-				$image = get_field('image');
+				$title = get_sub_field('section_title');
+				$lead_p = get_sub_field('lead_paragraph');
+				$image = get_sub_field('image');
 				$image_alt = $image['alt'];
 				$bg_color = get_field("primary_color");
 			?>	
-				<div class="project__details">
+				<section class="project__details">
 					<div class="project__details--bg" style="background-color: <?php echo $bg_color; ?>"></div>
 					<div class="container">
 						<div class="section-title project__details--title row">
@@ -77,13 +78,13 @@ get_header(); ?>
 								<div class="col-xs-12">
 									<?php echo $lead_p; ?>
 								</div>
-							</div><!-- .project__details--title -->
+							</div><!-- .project__details--text -->
 						<?php endif; ?>
 						<div class="project__details--image">
 							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image_alt; ?>">
 						</div>
 					</div><!-- .container -->
-				</div><!-- .project__details -->
+				</section><!-- .project__details -->
 			<?php 
 				endwhile;
 			else :
@@ -94,7 +95,7 @@ get_header(); ?>
 				$posts = get_field('other_works');
 				if($posts) :
 			?>
-				<div class="project__others">
+				<section class="project__others">
 					<div class="container">
 						<div class="section-title project__others--title row">
 							<div class="col-xs-12">
@@ -118,7 +119,7 @@ get_header(); ?>
 							<?php endforeach; ?>
 						</div>
 					</div><!-- .container -->
-				</div><!-- .project__others -->
+				</section><!-- .project__others -->
 			<?php endif; ?>
 
 		</div><!-- .project -->
