@@ -8882,23 +8882,18 @@ li:last-child {
 */
 /* ------ General Layout Styles ------ */
 /* line 6, ../sass/partials/_layout.scss */
-.content-area {
-  padding-top: 50px;
-}
-
-/* line 10, ../sass/partials/_layout.scss */
 .container {
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
 }
 
-/* line 16, ../sass/partials/_layout.scss */
+/* line 12, ../sass/partials/_layout.scss */
 img {
   max-width: 100%;
 }
 
-/* line 20, ../sass/partials/_layout.scss */
+/* line 16, ../sass/partials/_layout.scss */
 section {
   padding: 60px 0;
 }
@@ -8908,76 +8903,82 @@ section {
 */
 /* INDIVIDUAL PROJECT PAGE */
 /* line 7, ../sass/partials/_project.scss */
+.single-project .navbar.navbar-default .navbar-nav li a {
+  color: white;
+}
+
+/* line 13, ../sass/partials/_project.scss */
 .project__header {
   background-color: #f6f6f6;
   text-align: center;
   position: relative;
+  padding-top: 120px;
   padding-bottom: 0;
 }
-/* line 13, ../sass/partials/_project.scss */
+/* line 20, ../sass/partials/_project.scss */
 .project__header--bg {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
 }
-/* line 20, ../sass/partials/_project.scss */
+/* line 27, ../sass/partials/_project.scss */
 .project__header--title {
   margin-bottom: 35px;
 }
-/* line 24, ../sass/partials/_project.scss */
+/* line 31, ../sass/partials/_project.scss */
 .project__header .container {
   position: relative;
   z-index: 2;
 }
-/* line 29, ../sass/partials/_project.scss */
+/* line 36, ../sass/partials/_project.scss */
 .project__header h1 {
   margin-bottom: 0;
   color: white;
 }
-/* line 35, ../sass/partials/_project.scss */
+/* line 42, ../sass/partials/_project.scss */
 .project__overview {
   background-color: #f6f6f6;
 }
-/* line 38, ../sass/partials/_project.scss */
+/* line 45, ../sass/partials/_project.scss */
 .project__overview h5 {
   color: #A4947C;
   margin-bottom: 20px;
 }
-/* line 43, ../sass/partials/_project.scss */
+/* line 50, ../sass/partials/_project.scss */
 .project__overview--text {
   border-right: solid 2px #ccc;
 }
 @media (min-width: 992px) {
-  /* line 43, ../sass/partials/_project.scss */
+  /* line 50, ../sass/partials/_project.scss */
   .project__overview--text {
     padding-right: 30px;
   }
 }
 @media (min-width: 992px) {
-  /* line 51, ../sass/partials/_project.scss */
+  /* line 58, ../sass/partials/_project.scss */
   .project__overview--tools {
     padding-left: 30px;
   }
 }
-/* line 58, ../sass/partials/_project.scss */
+/* line 65, ../sass/partials/_project.scss */
 .project__details {
   position: relative;
   text-align: center;
 }
-/* line 62, ../sass/partials/_project.scss */
+/* line 69, ../sass/partials/_project.scss */
 .project__details--bg {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
 }
-/* line 69, ../sass/partials/_project.scss */
+/* line 76, ../sass/partials/_project.scss */
 .project__details .container {
   position: relative;
   z-index: 2;
 }
-/* line 74, ../sass/partials/_project.scss */
+/* line 81, ../sass/partials/_project.scss */
 .project__details--image {
   margin-top: 60px;
 }
@@ -8988,6 +8989,41 @@ section {
 /*
 ** NAVIGATION STYLES
 */
+/* line 6, ../sass/partials/_navs.scss */
+.navbar.navbar-default {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 20px 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  border-color: transparent;
+}
+/* line 20, ../sass/partials/_navs.scss */
+.navbar.navbar-default .navbar-header {
+  display: none;
+}
+/* line 24, ../sass/partials/_navs.scss */
+.navbar.navbar-default .navbar-nav {
+  text-align: center;
+  float: none;
+}
+/* line 28, ../sass/partials/_navs.scss */
+.navbar.navbar-default .navbar-nav li {
+  display: inline;
+  float: none;
+}
+/* line 32, ../sass/partials/_navs.scss */
+.navbar.navbar-default .navbar-nav li a {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
 /*
 ** BUTTON STYLES
 */

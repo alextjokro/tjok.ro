@@ -106,18 +106,14 @@ get_header(); ?>
 							<?php foreach($posts as $post): // variable must be called $post (IMPORTANT) ?>
 								<?php setup_postdata($post); ?>
 									<div class="col-xs-12 col-sm-6 others-column">
-
-										<!-- MORE IMAGE CODE HERE -->
-
+										<div class="others-image" style="background-image: url('<?php the_post_thumbnail(); ?>');"></div>
 										<div class="others-copy">
 											<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
 											<p><?php echo wp_trim_excerpt(); ?></p>
-										</div>
-
+										</div><!-- .others-copy -->
 									</div><!-- .others-column -->
-
 							<?php endforeach; ?>
-						</div>
+						</div><!-- .row -->
 					</div><!-- .container -->
 				</section><!-- .project__others -->
 			<?php endif; ?>

@@ -3,11 +3,18 @@
 */
 
 /* INDIVIDUAL PROJECT PAGE */
+.single-project {
+	.navbar.navbar-default .navbar-nav li a {
+		color: white;
+	}
+}
+
 .project {
 	&__header {
 		background-color: $grey;
 		text-align: center;
 		position: relative;
+		padding-top: 120px;
 		padding-bottom: 0;
 
 		&--bg {

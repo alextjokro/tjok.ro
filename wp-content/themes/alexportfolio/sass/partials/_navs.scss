@@ -1,3 +1,40 @@
 /*
 ** NAVIGATION STYLES
 */
+
+// Main Navbar
+.navbar.navbar-default {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 99;
+	padding: 20px 0;
+	margin-bottom: 0;
+
+	background-color: transparent;
+	border-color: transparent;
+	
+
+	.navbar-header {
+		display: none;
+	}
+
+	.navbar-nav {
+		text-align: center;
+		float: none;
+
+		li {
+			display: inline;
+			float: none;
+
+			a {
+				display: inline-block;
+				font-weight: $book;
+				font-size: 16px;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

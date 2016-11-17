@@ -28,7 +28,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<nav class="navbar navbar-default navbar-fixed-top" <?php echo (is_admin_bar_showing()) ? ' style="top: 32px;"' : ''; ?>>
+	<nav class="navbar navbar-default">
 	  <div class="container">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
@@ -47,7 +47,7 @@
 	      	$nav_args = array(
 	      		'theme_location' => 'main_menu',
 		    		'container' => '',
-		    		'menu_class' => 'nav navbar-nav navbar-right'
+		    		'menu_class' => 'nav navbar-nav'
 	      	);
 	      	wp_nav_menu($nav_args);
 	      ?>
