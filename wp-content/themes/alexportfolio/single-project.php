@@ -17,6 +17,7 @@ get_header(); ?>
 			while( have_posts() ) : the_post();
 
 			$main_image = get_field("main_image");
+			$main_image_thumb = $main_image['sizes']['fullwidth'];
 			$main_image_alt = $main_image["alt"];
 			$overview = get_field("project_overview");
 			$tools = get_field("project_tools");
@@ -35,7 +36,7 @@ get_header(); ?>
 					</div><!-- .project__header--title.section-title -->
 					<div class="project__header--image">
 						<div class="col-xs-12">
-							<img src="<?php echo $main_image["url"]; ?>" alt="<?php echo $main_image_alt; ?>">
+							<img src="<?php echo $main_image_thumb; ?>" alt="<?php echo $main_image_alt; ?>">
 						</div>
 					</div><!-- .project__header--image -->
 				</div><!-- .container <-->
@@ -62,6 +63,7 @@ get_header(); ?>
 				$title = get_sub_field('section_title');
 				$lead_p = get_sub_field('lead_paragraph');
 				$image = get_sub_field('image');
+				$image_thumb = $image['sizes']['fullwidth'];
 				$image_alt = $image['alt'];
 				$bg_color = get_field("primary_color");
 			?>	
@@ -81,7 +83,7 @@ get_header(); ?>
 							</div><!-- .project__details--text -->
 						<?php endif; ?>
 						<div class="project__details--image">
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image_alt; ?>">
+							<img src="<?php echo $image_thumb; ?>" alt="<?php echo $image_alt; ?>">
 						</div>
 					</div><!-- .container -->
 				</section><!-- .project__details -->
@@ -106,7 +108,7 @@ get_header(); ?>
 							<?php foreach($posts as $post): // variable must be called $post (IMPORTANT) ?>
 								<?php setup_postdata($post); ?>
 									<div class="col-xs-12 col-sm-6 others-column">
-										<div class="others-image" style="background-image: url('<?php the_post_thumbnail(); ?>');"></div>
+										<div class="others-image" style="background-image: url('<?php the_post_thumbnail('bgimage-small'); ?>');"></div>
 										<div class="others-copy">
 											<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
 											<p><?php echo wp_trim_excerpt(); ?></p>

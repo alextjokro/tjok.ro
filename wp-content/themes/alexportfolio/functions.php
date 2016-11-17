@@ -54,11 +54,14 @@
 	add_filter( 'image_resize_dimensions', 'alexportfolio_thumbnail_upscale', 10, 6 );
 
 	/* ------ Custom Image Sizes ------ */
-	function hnfcanada_custom_image_sizes() {
-		// add_image_size('medium-large', 800, 800);
-		// add_image_size('hero-image', 1665, 909);
+	function alexportfolio_custom_image_sizes() {
+		add_image_size('fullwidth', 1140, 640);
+		add_image_size('bgimage', 1920, 1800);
+		add_image_size('bgimage-small', 1000, 563);
+		add_image_size('square', 800, 800);
+		add_image_size('square-small', 400, 400);
 	}
-	add_action('after_setup_theme', 'hnfcanada_custom_image_sizes');
+	add_action('after_setup_theme', 'alexportfolio_custom_image_sizes');
 
 	/* ------ Page Slug Body Class ------ */
 	function add_slug_body_class( $classes ) {

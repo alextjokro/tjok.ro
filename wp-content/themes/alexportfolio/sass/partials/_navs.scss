@@ -38,3 +38,14 @@
 		}
 	}
 }
+
+// When WP Admin Bar presents
+.admin-bar {
+	.navbar.navbar-default {
+		margin-top: 32px;
+
+		@media(max-width: 782px) {
+			margin-top: 46px;
+		}
+	}
+}

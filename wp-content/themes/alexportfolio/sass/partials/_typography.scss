@@ -23,7 +23,7 @@ h1 {
 
 h2 {
 	font-size: 38px;
-	font-weight: $medium;
+	font-weight: $bold;
 	margin-bottom: 20px;
 }
 
@@ -43,12 +43,14 @@ h5 {
 	font-size: 19px;
 	font-weight: $bold;
 	margin-bottom: 15px;
+	line-height: 1.5;
 }
 
 h6 {
 	font-size: 16px;
 	font-weight: $medium;
 	margin-bottom: 10px;
+	line-height: 1.6;
 }
 
 p, li {

@@ -8823,7 +8823,7 @@ h1 {
 /* line 24, ../sass/partials/_typography.scss */
 h2 {
   font-size: 38px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
@@ -8846,16 +8846,18 @@ h5 {
   font-size: 19px;
   font-weight: 600;
   margin-bottom: 15px;
+  line-height: 1.5;
 }
 
-/* line 48, ../sass/partials/_typography.scss */
+/* line 49, ../sass/partials/_typography.scss */
 h6 {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 10px;
+  line-height: 1.6;
 }
 
-/* line 54, ../sass/partials/_typography.scss */
+/* line 56, ../sass/partials/_typography.scss */
 p, li {
   font-size: 16px;
   font-weight: 300;
@@ -8863,16 +8865,16 @@ p, li {
   margin-bottom: 15px;
 }
 
-/* line 61, ../sass/partials/_typography.scss */
+/* line 63, ../sass/partials/_typography.scss */
 ul {
   padding-left: 30px;
 }
 
-/* line 65, ../sass/partials/_typography.scss */
+/* line 67, ../sass/partials/_typography.scss */
 li {
   margin-bottom: 10px;
 }
-/* line 68, ../sass/partials/_typography.scss */
+/* line 70, ../sass/partials/_typography.scss */
 li:last-child {
   margin-bottom: 15px;
 }
@@ -9022,6 +9024,17 @@ section {
   font-weight: 300;
   font-size: 16px;
   text-transform: uppercase;
+}
+
+/* line 44, ../sass/partials/_navs.scss */
+.admin-bar .navbar.navbar-default {
+  margin-top: 32px;
+}
+@media (max-width: 782px) {
+  /* line 44, ../sass/partials/_navs.scss */
+  .admin-bar .navbar.navbar-default {
+    margin-top: 46px;
+  }
 }
 
 /*
