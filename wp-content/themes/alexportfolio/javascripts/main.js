@@ -8,6 +8,7 @@ $(function() {
 	// For every element that needs to use matchHeight.js
 	function equalHeight() {
 		$('.project__overview--col').matchHeight();
+		$('.others-copy h4').matchHeight();
 	}
 
 	function setH1() {

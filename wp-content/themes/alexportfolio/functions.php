@@ -30,11 +30,16 @@
 	}
 	add_action('init', 'alexportfolio_register_menus');
 
-	/* ------ Add Featured Image support in Post Pages ------ */
-	function alexportfolio_post_thumbnails() {
+	/* ------ Custom Image Sizes ------ */
+	function alexportfolio_custom_image_sizes() {
 		add_theme_support('post-thumbnails');
+		add_image_size('fullwidth', 1140, 9999);
+		add_image_size('bgimage', 1920, 9999);
+		add_image_size('bgimage-small', 1000, 9999);
+		add_image_size('square', 800, 800, true);
+		add_image_size('square-small', 400, 400, true);
 	}
-	add_action('after_setup_theme', 'alexportfolio_post_thumbnails');
+	add_action('after_setup_theme', 'alexportfolio_custom_image_sizes');
 
 	/* ------ Thumbnail Upscale ------ */
 	function alexportfolio_thumbnail_upscale( $default, $orig_w, $orig_h, $new_w, $new_h, $crop ){
@@ -52,16 +57,6 @@
 	    return array( 0, 0, (int) $s_x, (int) $s_y, (int) $new_w, (int) $new_h, (int) $crop_w, (int) $crop_h );
 	}
 	add_filter( 'image_resize_dimensions', 'alexportfolio_thumbnail_upscale', 10, 6 );
-
-	/* ------ Custom Image Sizes ------ */
-	function alexportfolio_custom_image_sizes() {
-		add_image_size('fullwidth', 1140, 640);
-		add_image_size('bgimage', 1920, 1800);
-		add_image_size('bgimage-small', 1000, 563);
-		add_image_size('square', 800, 800);
-		add_image_size('square-small', 400, 400);
-	}
-	add_action('after_setup_theme', 'alexportfolio_custom_image_sizes');
 
 	/* ------ Page Slug Body Class ------ */
 	function add_slug_body_class( $classes ) {

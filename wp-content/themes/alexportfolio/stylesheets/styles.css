@@ -8792,7 +8792,10 @@ button.close {
 ** COLOR LIBRARIES
 */
 /*
-** VARIABLES AND MIXINS
+** VARIABLES
+*/
+/*
+** MIXINS
 */
 /*
 ** TYPOGRAPHY STYLES
@@ -8805,7 +8808,7 @@ h1, h2, h3, h4, h5, h6, p, li, a {
 /* line 9, ../sass/partials/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
-  color: #141414;
+  color: #525252;
 }
 
 /* line 14, ../sass/partials/_typography.scss */
@@ -8900,6 +8903,51 @@ section {
   padding: 60px 0;
 }
 
+/* line 20, ../sass/partials/_layout.scss */
+.section-title {
+  text-align: center;
+}
+
+/* ------ LAYOUT - PROJECT SHOWCASE ------ */
+/* line 25, ../sass/partials/_layout.scss */
+section.layout-projectshowcase {
+  padding: 0;
+}
+/* line 28, ../sass/partials/_layout.scss */
+section.layout-projectshowcase .project-col {
+  background-repeat: no-repeat;
+  background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 300px;
+  position: relative;
+}
+/* line 33, ../sass/partials/_layout.scss */
+section.layout-projectshowcase .project-col__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+/* line 43, ../sass/partials/_layout.scss */
+section.layout-projectshowcase .project-col__overlay img {
+  max-width: 175px;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
 /*
 ** PROJECTS STYLES
 */
@@ -8912,7 +8960,6 @@ section {
 /* line 13, ../sass/partials/_project.scss */
 .project__header {
   background-color: #f6f6f6;
-  text-align: center;
   position: relative;
   padding-top: 120px;
   padding-bottom: 0;
@@ -8925,64 +8972,109 @@ section {
   right: 0;
 }
 /* line 27, ../sass/partials/_project.scss */
+.project__header--image {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+/* line 33, ../sass/partials/_project.scss */
 .project__header--title {
   margin-bottom: 35px;
 }
-/* line 31, ../sass/partials/_project.scss */
+/* line 37, ../sass/partials/_project.scss */
 .project__header .container {
   position: relative;
   z-index: 2;
 }
-/* line 36, ../sass/partials/_project.scss */
+/* line 42, ../sass/partials/_project.scss */
 .project__header h1 {
   margin-bottom: 0;
   color: white;
 }
-/* line 42, ../sass/partials/_project.scss */
+/* line 48, ../sass/partials/_project.scss */
 .project__overview {
   background-color: #f6f6f6;
 }
-/* line 45, ../sass/partials/_project.scss */
+/* line 51, ../sass/partials/_project.scss */
 .project__overview h5 {
   color: #A4947C;
   margin-bottom: 20px;
 }
-/* line 50, ../sass/partials/_project.scss */
+/* line 56, ../sass/partials/_project.scss */
 .project__overview--text {
   border-right: solid 2px #ccc;
 }
 @media (min-width: 992px) {
-  /* line 50, ../sass/partials/_project.scss */
+  /* line 56, ../sass/partials/_project.scss */
   .project__overview--text {
     padding-right: 30px;
   }
 }
 @media (min-width: 992px) {
-  /* line 58, ../sass/partials/_project.scss */
+  /* line 64, ../sass/partials/_project.scss */
   .project__overview--tools {
     padding-left: 30px;
   }
 }
-/* line 65, ../sass/partials/_project.scss */
+/* line 71, ../sass/partials/_project.scss */
 .project__details {
   position: relative;
-  text-align: center;
 }
-/* line 69, ../sass/partials/_project.scss */
+/* line 75, ../sass/partials/_project.scss */
 .project__details--bg {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
 }
-/* line 76, ../sass/partials/_project.scss */
+/* line 82, ../sass/partials/_project.scss */
 .project__details .container {
   position: relative;
   z-index: 2;
 }
-/* line 81, ../sass/partials/_project.scss */
+/* line 87, ../sass/partials/_project.scss */
 .project__details--image {
   margin-top: 60px;
+}
+/* line 93, ../sass/partials/_project.scss */
+.project__others .others-column {
+  padding-right: 30px;
+}
+/* line 96, ../sass/partials/_project.scss */
+.project__others .others-column:last-child {
+  text-align: right;
+  padding-left: 30px;
+}
+/* line 101, ../sass/partials/_project.scss */
+.project__others .others-column .others-image-container {
+  padding-top: 25px;
+  margin-bottom: 30px;
+  background-color: #ccc;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  box-shadow: 4px 4px 10px 1px #bbb;
+}
+/* line 110, ../sass/partials/_project.scss */
+.project__others .others-column .others-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 225px;
+  position: relative;
+}
+/* line 115, ../sass/partials/_project.scss */
+.project__others .others-column .others-image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 /*
@@ -9040,6 +9132,44 @@ section {
 /*
 ** BUTTON STYLES
 */
+/* line 5, ../sass/partials/_button.scss */
+.btn-primary {
+  display: inline-block;
+  font-family: "Gotham", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #525252;
+  color: #A4947C;
+  cursor: pointer;
+  border-radius: 999em;
+  padding: 11px 23px;
+  opacity: 1;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+/* line 77, ../sass/base/_vars.scss */
+.btn-primary:hover {
+  text-decoration: none;
+  color: #A4947C;
+  background-color: #525252;
+  opacity: 0.7;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+/* line 85, ../sass/base/_vars.scss */
+.btn-primary:active, .btn-primary:focus {
+  color: #A4947C !important;
+  background-color: #525252 !important;
+  border-color: transparent;
+  text-decoration: none;
+}
+
 /*
 ** FOOTER STYLES
 */
@@ -9047,4 +9177,5 @@ section {
 footer {
   text-align: center;
   padding: 60px 0;
+  background-color: #f6f6f6;
 }

@@ -1,3 +1,7 @@
 /*
 ** BUTTON STYLES
 */
+
+.btn-primary {
+	@include btn($black, $gold);
+}

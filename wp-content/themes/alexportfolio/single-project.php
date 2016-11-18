@@ -27,7 +27,7 @@ get_header(); ?>
 		<div class="project">
 
 			<section class="project__header">
-				<div class="project__header--bg" style="background-color: <?php echo $bg_color; ?>"></div>
+				<div class="project__header--bg" style="background-color: rgb(<?php echo $bg_color; ?>)"></div>
 				<div class="container">
 					<div class="section-title project__header--title row">
 						<div class="col-xs-12">
@@ -107,8 +107,20 @@ get_header(); ?>
 						<div class="row">
 							<?php foreach($posts as $post): // variable must be called $post (IMPORTANT) ?>
 								<?php setup_postdata($post); ?>
+								<?php 
+									// Variables
+									$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'bgimage-small' );
+									$bg_color = get_field("primary_color", $post->ID);
+									$opacity = 0;
+								?>
 									<div class="col-xs-12 col-sm-6 others-column">
-										<div class="others-image" style="background-image: url('<?php the_post_thumbnail('bgimage-small'); ?>');"></div>
+										<a href="<?php the_permalink(); ?>">
+											<div class="others-image-container">
+												<div class="others-image" style="background-image: url('<?php echo $thumb[0]; ?>');">
+													<div class="others-image__overlay" style="background-color: rgba(<?php echo $bg_color .','. $opacity; ?>);"></div>
+												</div>
+											</div>
+										</a>
 										<div class="others-copy">
 											<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
 											<p><?php echo wp_trim_excerpt(); ?></p>
