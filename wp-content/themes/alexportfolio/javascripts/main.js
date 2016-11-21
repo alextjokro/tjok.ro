@@ -9,6 +9,7 @@ $(function() {
 	function equalHeight() {
 		$('.project__overview--col').matchHeight();
 		$('.others-copy h4').matchHeight();
+		$('.layout-multiplecolumn .column').matchHeight();
 	}
 
 	function setH1() {

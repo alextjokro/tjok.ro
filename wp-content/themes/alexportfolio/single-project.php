@@ -68,7 +68,7 @@ get_header(); ?>
 				$bg_color = get_field("primary_color");
 			?>	
 				<section class="project__details">
-					<div class="project__details--bg" style="background-color: <?php echo $bg_color; ?>"></div>
+					<div class="project__details--bg" style="background-color: rgb(<?php echo $bg_color; ?>)"></div>
 					<div class="container">
 						<div class="section-title project__details--title row">
 							<div class="col-xs-12">
@@ -111,15 +111,15 @@ get_header(); ?>
 									// Variables
 									$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'bgimage-small' );
 									$bg_color = get_field("primary_color", $post->ID);
-									$opacity = 0;
+									$opacity = 0.2;
 								?>
 									<div class="col-xs-12 col-sm-6 others-column">
 										<a href="<?php the_permalink(); ?>">
 											<div class="others-image-container">
 												<div class="others-image" style="background-image: url('<?php echo $thumb[0]; ?>');">
 													<div class="others-image__overlay" style="background-color: rgba(<?php echo $bg_color .','. $opacity; ?>);"></div>
-												</div>
-											</div>
+												</div><!-- .others-image -->
+											</div><!-- .others-image-container -->
 										</a>
 										<div class="others-copy">
 											<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>

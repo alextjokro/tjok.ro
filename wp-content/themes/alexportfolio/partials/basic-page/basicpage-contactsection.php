@@ -35,7 +35,7 @@
 				
 				<li>
 					<a href="<?php echo $url; ?>" title="<?php echo $title; ?>" target="_blank">
-						<i class="fa <?php echo $icon; ?>"></i>
+						<i class="fa <?php echo $icon; ?> fa-2x"></i>
 					</a>
 				</li>
 

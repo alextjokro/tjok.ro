@@ -26,17 +26,73 @@
 		float: none;
 
 		li {
-			display: inline;
+			display: inline-block;
+			padding: 15px;
 			float: none;
 
 			a {
+				position: relative;
+				overflow: hidden;
 				display: inline-block;
+				padding: 0;
+				padding-bottom: 10px;
 				font-weight: $book;
 				font-size: 16px;
 				text-transform: uppercase;
+				@include transform(perspective(1px) translateZ(0));
+				@include box-shadow(0 0 1px transparent);
+				@include all-transition();
+
+				&:before {
+					content: "";
+					position: absolute;
+					z-index: -1;
+					left: 0;
+					right: 100%;
+					bottom: 0;
+					background: $gold;
+					height: 3px;
+					@include transition(right 0.4s ease-out);
+				}
+
+				&:hover {
+					color: $gold;
+					@include all-transition();
+				}
+
+				&:hover:before,
+				&:focus:before,
+				&:active:before {
+					right: 0;
+				}
+			}
+
+			&.current-menu-item,
+			&.current_page_ancestor {
+				a {
+					color: $gold;
+					// @include all-transition();
+
+					&:before {
+						right: 0;
+					}
+				}
 			}
 		}
 	}
+}
+
+// Main Navbar in Individual Project Page
+.single-project {
+	.navbar.navbar-default .navbar-nav li {
+		a {
+			color: white;
+
+			&:before {
+				background-color: white;
+			}
+		}
+	} 
 }
 
 // When WP Admin Bar presents
