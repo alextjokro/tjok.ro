@@ -70,7 +70,7 @@ ul:not(.nav) {
 	padding-left: 30px;
 }
 
-ul:not(.nav, .social) {
+ul:not(.social) {
 	text-align: left !important;
 }
 
@@ -79,5 +79,19 @@ li {
 
 	&:last-child {
 		margin-bottom: 15px;
+	}
+}
+
+a {
+	color: $gold;
+	font-weight: $medium;
+	border-bottom: dotted 1px $gold;
+	text-decoration: none;
+	@include all-transition();
+
+	&:hover {
+		text-decoration: none;
+		color: tint($gold, 20%);
+		@include all-transition();
 	}
 }

@@ -29,6 +29,8 @@ $(function() {
 		respond();
 		equalHeight();
 		setH1();
+
+		$('.page-about .about-contact').attr('id', 'contact');
 	});
 
 	$(window).load(function() {

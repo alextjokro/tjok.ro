@@ -63,7 +63,7 @@ get_header(); ?>
 				$title = get_sub_field('section_title');
 				$lead_p = get_sub_field('lead_paragraph');
 				$image = get_sub_field('image');
-				$image_thumb = $image['sizes']['fullwidth'];
+				$image_thumb = $image['sizes']['bgimage'];
 				$image_alt = $image['alt'];
 				$bg_color = get_field("primary_color");
 			?>	

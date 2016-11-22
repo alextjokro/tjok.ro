@@ -19,10 +19,62 @@
 
 	.navbar-header {
 		display: none;
+		position: relative;
+
+		@media (max-width: $screen-mobile-max) {
+			display: inline-block;
+			float: right;
+		}
+
+		label {
+			font-family: $base-font;
+			font-weight: $medium;
+			font-size: 16px;
+			color: $gold;
+			padding-top: 10px;
+			margin-right: 10px;
+		}
+
+		.navbar-toggle {
+			padding: 0;
+			border: none;
+
+			span.icon-bar {
+				width: 30px;
+				height: 4px;
+
+				&:nth-child(2),
+				&:last-child {
+					background-color: #eba73c;
+					height: 6px;
+				}
+
+				&:nth-child(2) {
+					@include border-top-left-radius(5px);
+					@include border-top-right-radius(5px);
+				}
+
+				&:nth-child(3) {
+					background-color: #805430;
+					@include border-radius(5px);
+				}
+
+				&:last-child {
+					@include border-bottom-left-radius(5px);
+					@include border-bottom-right-radius(5px);
+				}
+			}
+		}
+
+		.navbar-brand {
+			@media (max-width: $screen-mobile-max) {
+				display: none;
+			}
+		}
 	}
 
 	.navbar-nav {
-		text-align: center;
+		text-align: center !important;
 		float: none;
 
 		li {
@@ -39,6 +91,7 @@
 				font-weight: $book;
 				font-size: 16px;
 				text-transform: uppercase;
+				border-bottom: none;
 				@include transform(perspective(1px) translateZ(0));
 				@include box-shadow(0 0 1px transparent);
 				@include all-transition();
@@ -52,7 +105,7 @@
 					bottom: 0;
 					background: $gold;
 					height: 3px;
-					@include transition(right 0.4s ease-out);
+					@include transition(right 0.3s ease-out);
 				}
 
 				&:hover {

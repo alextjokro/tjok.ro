@@ -37,6 +37,14 @@ $bold: 600;
 	@include transform(translateX(-50%)translateY(-50%));
 }
 
+@mixin vertically-centered() {
+  position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 0;
+	@include transform(translateY(-50%));
+}
+
 @mixin overlay($bg-color) {
 	position: absolute;
 	top: 0;

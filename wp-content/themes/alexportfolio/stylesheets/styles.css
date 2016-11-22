@@ -8880,7 +8880,7 @@ ul:not(.nav) {
 }
 
 /* line 73, ../sass/partials/_typography.scss */
-ul:not(.nav, .social) {
+ul:not(.social) {
   text-align: left !important;
 }
 
@@ -8891,6 +8891,29 @@ li {
 /* line 80, ../sass/partials/_typography.scss */
 li:last-child {
   margin-bottom: 15px;
+}
+
+/* line 85, ../sass/partials/_typography.scss */
+a {
+  color: #A4947C;
+  font-weight: 500;
+  border-bottom: dotted 1px #A4947C;
+  text-decoration: none;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+/* line 92, ../sass/partials/_typography.scss */
+a:hover {
+  text-decoration: none;
+  color: #b6a996;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 /*
@@ -8907,124 +8930,125 @@ li:last-child {
 /* line 12, ../sass/partials/_layout.scss */
 img {
   max-width: 100%;
+  margin-bottom: 30px;
 }
 
-/* line 18, ../sass/partials/_layout.scss */
+/* line 19, ../sass/partials/_layout.scss */
 .page .content-area section:first-child {
   padding-top: 120px;
 }
 
-/* line 24, ../sass/partials/_layout.scss */
+/* line 25, ../sass/partials/_layout.scss */
 section {
   padding: 60px 0;
 }
 
-/* line 28, ../sass/partials/_layout.scss */
+/* line 29, ../sass/partials/_layout.scss */
 .section-title {
   text-align: center;
   margin-bottom: 40px;
   padding: 0 80px;
 }
 @media (max-width: 992px) {
-  /* line 28, ../sass/partials/_layout.scss */
+  /* line 29, ../sass/partials/_layout.scss */
   .section-title {
     padding: 0 40px;
   }
 }
 @media (max-width: 767px) {
-  /* line 28, ../sass/partials/_layout.scss */
+  /* line 29, ../sass/partials/_layout.scss */
   .section-title {
     padding: 0;
   }
 }
-/* line 41, ../sass/partials/_layout.scss */
+/* line 42, ../sass/partials/_layout.scss */
 .section-title h1, .section-title h2, .section-title h3, .section-title h4, .section-title h5, .section-title h6 {
   margin: 0;
 }
 
 /* ------ LAYOUT - SINGLE COLUMN LAYOUT ------ */
-/* line 48, ../sass/partials/_layout.scss */
+/* line 49, ../sass/partials/_layout.scss */
 section.layout-singlecolumn .section-content {
   padding: 0 80px;
 }
 @media (max-width: 992px) {
-  /* line 48, ../sass/partials/_layout.scss */
+  /* line 49, ../sass/partials/_layout.scss */
   section.layout-singlecolumn .section-content {
     padding: 0 40px;
   }
 }
 @media (max-width: 767px) {
-  /* line 48, ../sass/partials/_layout.scss */
+  /* line 49, ../sass/partials/_layout.scss */
   section.layout-singlecolumn .section-content {
     padding: 0;
   }
 }
-/* line 60, ../sass/partials/_layout.scss */
+/* line 61, ../sass/partials/_layout.scss */
 section.layout-singlecolumn p:last-child {
   margin-bottom: 0;
 }
 
 /* ------ LAYOUT - MULTI COLUMN LAYOUT ------ */
 @media (max-width: 767px) {
-  /* line 68, ../sass/partials/_layout.scss */
+  /* line 69, ../sass/partials/_layout.scss */
   section.layout-multiplecolumn .column {
     margin-bottom: 30px;
   }
 }
 @media (max-width: 992px) {
-  /* line 74, ../sass/partials/_layout.scss */
+  /* line 75, ../sass/partials/_layout.scss */
   section.layout-multiplecolumn .column-4 {
     margin-bottom: 40px;
   }
 }
 @media (max-width: 767px) {
-  /* line 74, ../sass/partials/_layout.scss */
+  /* line 75, ../sass/partials/_layout.scss */
   section.layout-multiplecolumn .column-4 {
     margin-bottom: 30px;
   }
 }
-/* line 84, ../sass/partials/_layout.scss */
+/* line 85, ../sass/partials/_layout.scss */
 section.layout-multiplecolumn .column-img-container {
   text-align: center;
   margin: 0 0 30px;
 }
 @media (max-width: 992px) {
-  /* line 84, ../sass/partials/_layout.scss */
+  /* line 85, ../sass/partials/_layout.scss */
   section.layout-multiplecolumn .column-img-container {
     margin: 0 0 25px;
   }
 }
 @media (max-width: 767px) {
-  /* line 84, ../sass/partials/_layout.scss */
+  /* line 85, ../sass/partials/_layout.scss */
   section.layout-multiplecolumn .column-img-container {
     margin: 0 0 15px;
   }
 }
-/* line 97, ../sass/partials/_layout.scss */
+/* line 98, ../sass/partials/_layout.scss */
 section.layout-multiplecolumn .column-text-container {
   padding: 0 15px;
 }
 @media (max-width: 767px) {
-  /* line 97, ../sass/partials/_layout.scss */
+  /* line 98, ../sass/partials/_layout.scss */
   section.layout-multiplecolumn .column-text-container {
     padding: 0;
   }
 }
-/* line 104, ../sass/partials/_layout.scss */
+/* line 105, ../sass/partials/_layout.scss */
 section.layout-multiplecolumn .column-text-container p:last-child {
   margin-bottom: 0;
 }
-/* line 111, ../sass/partials/_layout.scss */
+/* line 112, ../sass/partials/_layout.scss */
 section.layout-multiplecolumn .column-3 p, section.layout-multiplecolumn .column-4 p {
   font-size: 14px;
 }
 
 /* ------ LAYOUT - PROJECT SHOWCASE ------ */
-/* line 119, ../sass/partials/_layout.scss */
+/* line 120, ../sass/partials/_layout.scss */
 section.layout-projectshowcase {
   padding: 0;
 }
-/* line 122, ../sass/partials/_layout.scss */
+/* line 123, ../sass/partials/_layout.scss */
 section.layout-projectshowcase .project-col {
   background-repeat: no-repeat;
   background-position: center center;
@@ -9034,9 +9058,12 @@ section.layout-projectshowcase .project-col {
   background-size: cover;
   height: 300px;
   position: relative;
+  border: none;
+  overflow: hidden;
 }
-/* line 127, ../sass/partials/_layout.scss */
+/* line 130, ../sass/partials/_layout.scss */
 section.layout-projectshowcase .project-col__overlay {
+  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
@@ -9045,8 +9072,42 @@ section.layout-projectshowcase .project-col__overlay {
   width: 100%;
   height: 100%;
   z-index: 2;
+  -moz-transform: perspective(1px) translateZ(0);
+  -ms-transform: perspective(1px) translateZ(0);
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
 }
-/* line 137, ../sass/partials/_layout.scss */
+/* line 142, ../sass/partials/_layout.scss */
+section.layout-projectshowcase .project-col__overlay:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: inherit;
+  -moz-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -moz-transform-origin: 50% 100% 50%;
+  -ms-transform-origin: 50% 100% 50%;
+  -webkit-transform-origin: 50% 100% 50%;
+  transform-origin: 50% 100% 50%;
+  -moz-transition: -moz-transform 0.5s ease-out;
+  -o-transition: -o-transform 0.5s ease-out;
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+}
+/* line 156, ../sass/partials/_layout.scss */
+section.layout-projectshowcase .project-col__overlay:hover:before {
+  -moz-transform: scaleY(2);
+  -ms-transform: scaleY(2);
+  -webkit-transform: scaleY(2);
+  transform: scaleY(2);
+}
+/* line 160, ../sass/partials/_layout.scss */
 section.layout-projectshowcase .project-col__overlay img {
   max-width: 175px;
   position: absolute;
@@ -9057,14 +9118,15 @@ section.layout-projectshowcase .project-col__overlay img {
   -ms-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+  z-index: 3;
 }
 
 /* ------ LAYOUT - CONTACT SECTION ------ */
-/* line 149, ../sass/partials/_layout.scss */
+/* line 173, ../sass/partials/_layout.scss */
 .layout-contactsection form.wpcf7-form p {
   margin-bottom: 0;
 }
-/* line 153, ../sass/partials/_layout.scss */
+/* line 177, ../sass/partials/_layout.scss */
 .layout-contactsection form.wpcf7-form input,
 .layout-contactsection form.wpcf7-form textarea {
   width: 100%;
@@ -9078,29 +9140,29 @@ section.layout-projectshowcase .project-col__overlay img {
   font-size: 16px;
   color: #A4947C;
 }
-/* line 166, ../sass/partials/_layout.scss */
+/* line 190, ../sass/partials/_layout.scss */
 .layout-contactsection form.wpcf7-form ::-webkit-input-placeholder {
   color: #A4947C;
   font-weight: 100;
 }
-/* line 171, ../sass/partials/_layout.scss */
+/* line 195, ../sass/partials/_layout.scss */
 .layout-contactsection form.wpcf7-form :-moz-placeholder {
   /* Firefox 18- */
   color: #A4947C;
   font-weight: 100;
 }
-/* line 176, ../sass/partials/_layout.scss */
+/* line 200, ../sass/partials/_layout.scss */
 .layout-contactsection form.wpcf7-form ::-moz-placeholder {
   /* Firefox 19+ */
   color: #A4947C;
   font-weight: 100;
 }
-/* line 181, ../sass/partials/_layout.scss */
+/* line 205, ../sass/partials/_layout.scss */
 .layout-contactsection form.wpcf7-form :-ms-input-placeholder {
   color: #A4947C;
   font-weight: 100;
 }
-/* line 186, ../sass/partials/_layout.scss */
+/* line 210, ../sass/partials/_layout.scss */
 .layout-contactsection form.wpcf7-form input[type="submit"] {
   background-color: #525252;
   -webkit-transition: all 0.25s ease-in-out;
@@ -9109,7 +9171,7 @@ section.layout-projectshowcase .project-col__overlay img {
   -ms-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 190, ../sass/partials/_layout.scss */
+/* line 214, ../sass/partials/_layout.scss */
 .layout-contactsection form.wpcf7-form input[type="submit"]:hover {
   opacity: 0.7;
   -webkit-transition: all 0.25s ease-in-out;
@@ -9118,57 +9180,72 @@ section.layout-projectshowcase .project-col__overlay img {
   -ms-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 197, ../sass/partials/_layout.scss */
+/* line 221, ../sass/partials/_layout.scss */
 .layout-contactsection .social {
   padding-left: 0;
   display: block;
   width: 100%;
   text-align: center;
 }
-/* line 204, ../sass/partials/_layout.scss */
+/* line 228, ../sass/partials/_layout.scss */
 .layout-contactsection .social li {
   display: inline;
 }
-/* line 207, ../sass/partials/_layout.scss */
+/* line 231, ../sass/partials/_layout.scss */
 .layout-contactsection .social li a {
   display: inline-block;
   padding: 0 10px;
+  opacity: 1;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+/* line 237, ../sass/partials/_layout.scss */
+.layout-contactsection .social li a:hover {
+  opacity: 0.7;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 /* ------ PAGE - WORK (CURRENT HOME) ------ */
-/* line 217, ../sass/partials/_layout.scss */
+/* line 248, ../sass/partials/_layout.scss */
 .page-work h1 {
   color: #525252;
 }
 
 /* ------ PAGE - ABOUT ------ */
-/* line 225, ../sass/partials/_layout.scss */
+/* line 256, ../sass/partials/_layout.scss */
 .page-about .about-pitch .section-title {
   padding-bottom: 40px;
   border-bottom: solid 5px #A4947C;
 }
-/* line 232, ../sass/partials/_layout.scss */
+/* line 263, ../sass/partials/_layout.scss */
 .page-about .about-skills h2, .page-about .about-skills h3, .page-about .about-skills h4, .page-about .about-skills h5, .page-about .about-skills h6 {
   color: #A4947C;
 }
-/* line 236, ../sass/partials/_layout.scss */
+/* line 267, ../sass/partials/_layout.scss */
 .page-about .about-skills p, .page-about .about-skills li {
   color: white;
 }
-/* line 240, ../sass/partials/_layout.scss */
+/* line 271, ../sass/partials/_layout.scss */
 .page-about .about-skills .column-2 {
   text-align: center;
 }
-/* line 243, ../sass/partials/_layout.scss */
+/* line 274, ../sass/partials/_layout.scss */
 .page-about .about-skills .column-2:first-child {
   border-right: solid 2px #A4947C;
 }
-/* line 250, ../sass/partials/_layout.scss */
+/* line 281, ../sass/partials/_layout.scss */
 .page-about .about-contact h3 {
   color: white;
   text-transform: none;
 }
-/* line 258, ../sass/partials/_layout.scss */
+/* line 289, ../sass/partials/_layout.scss */
 .page-about .about-contact form.wpcf7-form .your-name input,
 .page-about .about-contact form.wpcf7-form .your-email input {
   display: inline-block;
@@ -9176,22 +9253,22 @@ section.layout-projectshowcase .project-col__overlay img {
   width: 48.5%;
   margin-right: 3%;
 }
-/* line 267, ../sass/partials/_layout.scss */
+/* line 298, ../sass/partials/_layout.scss */
 .page-about .about-contact form.wpcf7-form .your-email input {
   margin-right: 0;
 }
-/* line 273, ../sass/partials/_layout.scss */
+/* line 304, ../sass/partials/_layout.scss */
 .page-about .about-contact .social li a {
   color: white;
 }
 
 /* ------ BG COLORS ------ */
-/* line 280, ../sass/partials/_layout.scss */
+/* line 311, ../sass/partials/_layout.scss */
 .bg-gold {
   background-color: #A4947C;
 }
 
-/* line 284, ../sass/partials/_layout.scss */
+/* line 315, ../sass/partials/_layout.scss */
 .bg-black {
   background-color: #292C32;
 }
@@ -9286,14 +9363,10 @@ section.layout-projectshowcase .project-col__overlay img {
 }
 /* line 92, ../sass/partials/_project.scss */
 .project__others .others-column .others-image-container {
-  padding-top: 25px;
   margin-bottom: 30px;
-  background-color: #ccc;
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
   box-shadow: 4px 4px 10px 1px #bbb;
 }
-/* line 101, ../sass/partials/_project.scss */
+/* line 97, ../sass/partials/_project.scss */
 .project__others .others-column .others-image {
   background-repeat: no-repeat;
   background-position: center center;
@@ -9304,7 +9377,7 @@ section.layout-projectshowcase .project-col__overlay img {
   height: 225px;
   position: relative;
 }
-/* line 106, ../sass/partials/_project.scss */
+/* line 102, ../sass/partials/_project.scss */
 .project__others .others-column .others-image__overlay {
   position: absolute;
   top: 0;
@@ -9315,7 +9388,7 @@ section.layout-projectshowcase .project-col__overlay img {
   height: 100%;
   z-index: 2;
 }
-/* line 119, ../sass/partials/_project.scss */
+/* line 115, ../sass/partials/_project.scss */
 .project__others .others-column .others-copy p {
   font-size: 14px;
 }
@@ -9342,19 +9415,82 @@ section.layout-projectshowcase .project-col__overlay img {
 /* line 20, ../sass/partials/_navs.scss */
 .navbar.navbar-default .navbar-header {
   display: none;
+  position: relative;
 }
-/* line 24, ../sass/partials/_navs.scss */
+@media (max-width: 767px) {
+  /* line 20, ../sass/partials/_navs.scss */
+  .navbar.navbar-default .navbar-header {
+    display: inline-block;
+    float: right;
+  }
+}
+/* line 29, ../sass/partials/_navs.scss */
+.navbar.navbar-default .navbar-header label {
+  font-family: "Gotham", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #A4947C;
+  padding-top: 10px;
+  margin-right: 10px;
+}
+/* line 38, ../sass/partials/_navs.scss */
+.navbar.navbar-default .navbar-header .navbar-toggle {
+  padding: 0;
+  border: none;
+}
+/* line 42, ../sass/partials/_navs.scss */
+.navbar.navbar-default .navbar-header .navbar-toggle span.icon-bar {
+  width: 30px;
+  height: 4px;
+}
+/* line 46, ../sass/partials/_navs.scss */
+.navbar.navbar-default .navbar-header .navbar-toggle span.icon-bar:nth-child(2), .navbar.navbar-default .navbar-header .navbar-toggle span.icon-bar:last-child {
+  background-color: #eba73c;
+  height: 6px;
+}
+/* line 52, ../sass/partials/_navs.scss */
+.navbar.navbar-default .navbar-header .navbar-toggle span.icon-bar:nth-child(2) {
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+/* line 57, ../sass/partials/_navs.scss */
+.navbar.navbar-default .navbar-header .navbar-toggle span.icon-bar:nth-child(3) {
+  background-color: #805430;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 62, ../sass/partials/_navs.scss */
+.navbar.navbar-default .navbar-header .navbar-toggle span.icon-bar:last-child {
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+@media (max-width: 767px) {
+  /* line 69, ../sass/partials/_navs.scss */
+  .navbar.navbar-default .navbar-header .navbar-brand {
+    display: none;
+  }
+}
+/* line 76, ../sass/partials/_navs.scss */
 .navbar.navbar-default .navbar-nav {
-  text-align: center;
+  text-align: center !important;
   float: none;
 }
-/* line 28, ../sass/partials/_navs.scss */
+/* line 80, ../sass/partials/_navs.scss */
 .navbar.navbar-default .navbar-nav li {
   display: inline-block;
   padding: 15px;
   float: none;
 }
-/* line 33, ../sass/partials/_navs.scss */
+/* line 85, ../sass/partials/_navs.scss */
 .navbar.navbar-default .navbar-nav li a {
   position: relative;
   overflow: hidden;
@@ -9364,6 +9500,7 @@ section.layout-projectshowcase .project-col__overlay img {
   font-weight: 300;
   font-size: 16px;
   text-transform: uppercase;
+  border-bottom: none;
   -moz-transform: perspective(1px) translateZ(0);
   -ms-transform: perspective(1px) translateZ(0);
   -webkit-transform: perspective(1px) translateZ(0);
@@ -9377,7 +9514,7 @@ section.layout-projectshowcase .project-col__overlay img {
   -ms-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 46, ../sass/partials/_navs.scss */
+/* line 99, ../sass/partials/_navs.scss */
 .navbar.navbar-default .navbar-nav li a:before {
   content: "";
   position: absolute;
@@ -9387,12 +9524,12 @@ section.layout-projectshowcase .project-col__overlay img {
   bottom: 0;
   background: #A4947C;
   height: 3px;
-  -moz-transition: right 0.4s ease-out;
-  -o-transition: right 0.4s ease-out;
-  -webkit-transition: right 0.4s ease-out;
-  transition: right 0.4s ease-out;
+  -moz-transition: right 0.3s ease-out;
+  -o-transition: right 0.3s ease-out;
+  -webkit-transition: right 0.3s ease-out;
+  transition: right 0.3s ease-out;
 }
-/* line 58, ../sass/partials/_navs.scss */
+/* line 111, ../sass/partials/_navs.scss */
 .navbar.navbar-default .navbar-nav li a:hover {
   color: #A4947C;
   -webkit-transition: all 0.25s ease-in-out;
@@ -9401,34 +9538,34 @@ section.layout-projectshowcase .project-col__overlay img {
   -ms-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 63, ../sass/partials/_navs.scss */
+/* line 116, ../sass/partials/_navs.scss */
 .navbar.navbar-default .navbar-nav li a:hover:before, .navbar.navbar-default .navbar-nav li a:focus:before, .navbar.navbar-default .navbar-nav li a:active:before {
   right: 0;
 }
-/* line 72, ../sass/partials/_navs.scss */
+/* line 125, ../sass/partials/_navs.scss */
 .navbar.navbar-default .navbar-nav li.current-menu-item a, .navbar.navbar-default .navbar-nav li.current_page_ancestor a {
   color: #A4947C;
 }
-/* line 76, ../sass/partials/_navs.scss */
+/* line 129, ../sass/partials/_navs.scss */
 .navbar.navbar-default .navbar-nav li.current-menu-item a:before, .navbar.navbar-default .navbar-nav li.current_page_ancestor a:before {
   right: 0;
 }
 
-/* line 88, ../sass/partials/_navs.scss */
+/* line 141, ../sass/partials/_navs.scss */
 .single-project .navbar.navbar-default .navbar-nav li a {
   color: white;
 }
-/* line 91, ../sass/partials/_navs.scss */
+/* line 144, ../sass/partials/_navs.scss */
 .single-project .navbar.navbar-default .navbar-nav li a:before {
   background-color: white;
 }
 
-/* line 100, ../sass/partials/_navs.scss */
+/* line 153, ../sass/partials/_navs.scss */
 .admin-bar .navbar.navbar-default {
   margin-top: 32px;
 }
 @media (max-width: 782px) {
-  /* line 100, ../sass/partials/_navs.scss */
+  /* line 153, ../sass/partials/_navs.scss */
   .admin-bar .navbar.navbar-default {
     margin-top: 46px;
   }
@@ -9455,7 +9592,7 @@ section.layout-projectshowcase .project-col__overlay img {
   -ms-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 77, ../sass/base/_vars.scss */
+/* line 85, ../sass/base/_vars.scss */
 .btn-primary:hover {
   text-decoration: none;
   color: #A4947C;
@@ -9467,7 +9604,7 @@ section.layout-projectshowcase .project-col__overlay img {
   -ms-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 85, ../sass/base/_vars.scss */
+/* line 93, ../sass/base/_vars.scss */
 .btn-primary:active, .btn-primary:focus {
   color: #A4947C !important;
   background-color: #525252 !important;
