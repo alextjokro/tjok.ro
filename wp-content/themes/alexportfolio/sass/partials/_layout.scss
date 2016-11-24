@@ -11,6 +11,7 @@
 
 img {
 	max-width: 100%;
+	height: auto;
 	margin-bottom: 30px;
 }
 
@@ -18,12 +19,24 @@ img {
 	.content-area {
 		section:first-child {
 			padding-top: 120px;
+
+			@media(max-width: $screen-mobile-max) {
+				padding-top: 80px;
+			}
 		}
 	}
 }
 
 section {
 	padding: 60px 0;
+
+	@media(max-width: $screen-md) {
+		padding: 40px 0;
+	}
+
+	@media(max-width: $screen-mobile-max) {
+		padding: 30px 0;
+	}
 }
 
 .section-title {
@@ -33,10 +46,12 @@ section {
 
 	@media(max-width: $screen-md) {
 		padding: 0 40px;
+		margin-bottom: 30px;
 	}
 
 	@media(max-width: $screen-mobile-max) {
 		padding: 0;
+		margin-bottom: 20px;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -70,6 +85,7 @@ section.layout-multiplecolumn {
 
 		@media(max-width: $screen-mobile-max) {
 			margin-bottom: 30px;
+			text-align: center;
 		}
 
 		&-4 {
@@ -127,6 +143,10 @@ section.layout-projectshowcase {
 		border: none;
 		overflow: hidden;
 
+		@media(max-width: $screen-mobile) {
+			height: 200px;
+		}
+
 		&__overlay {
 			display: inline-block;
 			position: absolute;
@@ -149,7 +169,11 @@ section.layout-projectshowcase {
 				bottom: 0;
 				background-color: inherit;
 				@include transform(scaleY(0));
-				@include transform-origin(50% 100%);
+				-webkit-transform-origin: 50% 100%;
+				-moz-transform-origin: 50% 100%;
+				-ms-transform-origin: 50% 100%;
+				-o-transform-origin: 50% 100%;
+  			transform-origin: 50% 100%;
 				@include transition(transform 0.5s ease-out);
 			}
 
@@ -161,6 +185,10 @@ section.layout-projectshowcase {
 				max-width: 175px;
 				@include centered();
 				z-index: 3;
+
+				@media(max-width: $screen-mobile) {
+					max-width: 150px;
+				}
 			}
 		}
 	}
@@ -174,17 +202,26 @@ section.layout-projectshowcase {
 			margin-bottom: 0;
 		}
 
+		.wpcf7-form-control-wrap {
+			display: inline-block;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
 		input,
 		textarea {
 			width: 100%;
 			padding: 7px 12px;
-			margin-bottom: 25px;
 			border: none;
 			@include border-radius(3px);
 			
 			font-family: $base-font;
 			font-size: 16px;
 			color: $gold;
+
+			@media(max-width: $screen-mobile-max) {
+				font-size: 15px;
+			}
 		}
 
 		::-webkit-input-placeholder {
@@ -209,12 +246,24 @@ section.layout-projectshowcase {
 
 		input[type="submit"] {
 			background-color: $black;
+			display: block;
+			max-width: 250px;
+			margin: 0 auto 25px;
 			@include all-transition();
 
 			&:hover {
 				opacity: 0.7;
 				@include all-transition();
 			}
+		}
+
+		img.ajax-loader {
+			display: none;
+		}
+
+		.wpcf7-validation-errors {
+			text-align: center;
+			padding: 10px 1em;
 		}
 	}
 
@@ -271,8 +320,24 @@ section.layout-projectshowcase {
 		.column-2 {
 			text-align: center;
 
+			@media(max-width: $screen-mobile-max) {
+				margin-bottom: 0;
+			}
+
 			&:first-child {
 				border-right: solid 2px $gold;
+
+				@media(max-width: $screen-mobile-max) {
+					border-right: none;
+				}
+
+				ul {
+					margin-bottom: 0;
+
+					li:last-child {
+						margin-bottom: 10px;
+					}
+				}
 			}
 		}
 	}
@@ -284,20 +349,30 @@ section.layout-projectshowcase {
 		}
 
 		form.wpcf7-form {
+
 			.your-name,
 			.your-email {
+				float: left;
+				display: inline-block;
+				width: 48.5%;
+				margin-right: 3%;
+
+				@media(max-width: $screen-mobile-max) {
+					width: 100%;
+					margin-right: 0;
+				}
+
 				input {
-					display: inline-block;
-					float: left;
-					width: 48.5%;
-					margin-right: 3%;
+					width: 100%;
 				}
 			}
 
 			.your-email {
-				input {
-					margin-right: 0;
-				}
+				margin-right: 0;
+			}
+
+			.wpcf7-validation-errors {
+				color: white;
 			}
 		}
 

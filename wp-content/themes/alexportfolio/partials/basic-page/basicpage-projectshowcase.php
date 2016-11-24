@@ -19,7 +19,7 @@
 					<?php setup_postdata($post); ?>
 					<?php
 						//Variables 
-						$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'bgimage' );
+						$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'fullwidth' );
 						$logo = get_field("project_logo", $post->ID);
 						$logo_alt = $logo['alt'];
 						$bg_color = get_field("primary_color", $post->ID);

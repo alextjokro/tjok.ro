@@ -11,6 +11,10 @@
 		padding-top: 120px;
 		padding-bottom: 0;
 
+		@media(max-width: $screen-mobile-max) {
+			padding-top: 80px;
+		}
+
 		&--bg {
 			position: absolute;
 			top: 0;
@@ -49,6 +53,10 @@
 			@media (min-width: $screen-md) {
 				padding-right: 30px;
 			}
+
+			@media (max-width: $screen-mobile-max) {
+				border-right: none;
+			}
 		}
 
 		&--tools {
@@ -76,17 +84,44 @@
 
 		&--image {
 			margin-top: 60px;
+
+			@media(max-width: $screen-md) {
+				margin-top: 40px;
+			}
+
+			@media(max-width: $screen-mobile-max) {
+				margin-top: 20px;
+			}
+
+			img {
+				margin-bottom: 0;
+			}
 		}
 	}
 
 	&__others {
 
 		.others-column {
-			padding-right: 30px;
+
+			@media(max-width: $screen-mobile-max) {
+				margin-bottom: 20px;
+			}
+
+			&:first-child {
+				padding-right: 30px;
+
+				@media(max-width: $screen-mobile-max) {
+					padding-right: 15px;
+				}
+			}
 
 			&:last-child {
 				text-align: right;
 				padding-left: 30px;
+
+				@media(max-width: $screen-mobile-max) {
+					padding-left: 15px;
+				}
 			}
 			
 			.others-image-container {

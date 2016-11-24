@@ -2,6 +2,57 @@
 ** TYPOGRAPHY STYLES
 */
 
+/* --- @font-face ---*/
+/* GOTHAM */
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/gotham/Gotham-Light.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/gotham/Gotham-Light?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/gotham/Gotham-Light.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/gotham/Gotham-Light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/gotham/Gotham-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/gotham/Gotham-Light.svg#Gotham-Light') format('svg'); /* Legacy iOS */
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/gotham/Gotham-Book.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/gotham/Gotham-Book?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/gotham/Gotham-Book.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/gotham/Gotham-Book.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/gotham/Gotham-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/gotham/Gotham-Book.svg#Gotham-Book') format('svg'); /* Legacy iOS */
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/gotham/Gotham-Medium.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/gotham/Gotham-Medium?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/gotham/Gotham-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/gotham/Gotham-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/gotham/Gotham-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/gotham/Gotham-Medium.svg#Gotham-Light') format('svg'); /* Legacy iOS */
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/gotham/Gotham-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/gotham/Gotham-Bold?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/gotham/Gotham-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/gotham/Gotham-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/gotham/Gotham-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/gotham/Gotham-Bold.svg#Gotham-Bold') format('svg'); /* Legacy iOS */
+  font-weight: 600;
+  font-style: normal;
+}
+/* --- END @font-face ---*/
+
 h1, h2, h3, h4, h5, h6, p, li, a {
 	font-family: $base-font;
 }
@@ -19,12 +70,40 @@ h1 {
 	font-size: 38px;
 	font-weight: $bold;
 	margin-bottom: 25px;
+	line-height: 1.2;
+
+	@media(max-width: $screen-md) {
+		font-size: 32px;
+	}
+
+	@media(max-width: $screen-mobile-max) {
+		font-size: 28px;
+		line-height: 1.3;
+	}
+
+	@media(max-width: $screen-mobile) {
+		font-size: 26px;
+	}
 }
 
 h2 {
 	font-size: 38px;
 	font-weight: $bold;
 	margin-bottom: 20px;
+	line-height: 1.2;
+
+	@media(max-width: $screen-md) {
+		font-size: 32px;
+	}
+
+	@media(max-width: $screen-mobile-max) {
+		font-size: 28px;
+		line-height: 1.3;
+	}
+
+	@media(max-width: $screen-mobile) {
+		font-size: 26px;
+	}
 }
 
 h3 {
@@ -32,6 +111,18 @@ h3 {
 	font-weight: $medium;
 	margin-bottom: 20px;
 	line-height: 1.3;
+
+	@media(max-width: $screen-md) {
+		font-size: 28px;
+	}
+
+	@media(max-width: $screen-mobile-max) {
+		font-size: 24px;
+	}
+
+	@media(max-width: $screen-mobile) {
+		font-size: 22px;
+	}
 }
 
 h4 {
@@ -39,6 +130,11 @@ h4 {
 	font-weight: $medium;
 	margin-bottom: 15px;
 	line-height: 1.3;
+
+	@media(max-width: $screen-mobile-max) {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
 }
 
 h5 {
@@ -46,6 +142,11 @@ h5 {
 	font-weight: $bold;
 	margin-bottom: 15px;
 	line-height: 1.5;
+
+	@media(max-width: $screen-mobile-max) {
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
 }
 
 h6 {
@@ -60,6 +161,10 @@ p, li {
 	font-weight: $book;
 	line-height: 1.7;
 	margin-bottom: 15px;
+
+	@media(max-width: $screen-mobile-max) {
+		font-size: 15px;
+	}
 }
 
 ul:not(.nav) {

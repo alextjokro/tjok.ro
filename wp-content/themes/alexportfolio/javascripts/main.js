@@ -20,9 +20,21 @@ $(function() {
 		}
 	}
 
+	function addMobileNavClass() {
+		var width = window.innerWidth ||
+                document.documentElement.clientWidth ||
+                document.body.clientWidth;
+
+    if (width <= 767) {
+    	$('.navbar.navbar-default').addClass('navbar-mobile');
+    } else {
+    	$('.navbar.navbar-default.navbar-mobile').removeClass('navbar-mobile');
+    }
+	}
+
 	// Please place all the responsive functions here
 	function respond() {
-    projectBackground();
+    addMobileNavClass();
 	}
 
 	$(document).ready(function() {
@@ -34,12 +46,12 @@ $(function() {
 	});
 
 	$(window).load(function() {
-
+		projectBackground();
 	});
 
 	$(window).resize(function() {
 		respond();
-		
+		projectBackground();
 	});
 
 	$(window).scroll(function() {
