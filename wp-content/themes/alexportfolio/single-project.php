@@ -17,7 +17,7 @@ get_header(); ?>
 			while( have_posts() ) : the_post();
 
 			$main_image = get_field("main_image");
-			$main_image_thumb = $main_image['sizes']['fullwidth'];
+			$main_image_thumb = $main_image['sizes']['bgimage-small'];
 			$main_image_alt = $main_image["alt"];
 			$overview = get_field("project_overview");
 			$tools = get_field("project_tools");
@@ -63,7 +63,7 @@ get_header(); ?>
 				$title = get_sub_field('section_title');
 				$lead_p = get_sub_field('lead_paragraph');
 				$image = get_sub_field('image');
-				$image_thumb = $image['sizes']['bgimage'];
+				$image_thumb = $image['sizes']['bgimage-small'];
 				$image_alt = $image['alt'];
 				$bg_color = get_field("primary_color");
 			?>	
