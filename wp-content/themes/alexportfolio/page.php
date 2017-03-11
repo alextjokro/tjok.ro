@@ -7,8 +7,8 @@
  * other "pages" on your WordPress site will use a different template.
  *
  * @package WordPress
- * @subpackage hnfcanada
- * @since hnfcanada 1.0
+ * @subpackage alexportfolio
+ * @since alexportfolio 1.0
  */
 
 get_header(); ?>
